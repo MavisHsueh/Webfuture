@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>立紘數位科技</title>
+
+  <!-- 字體 -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {},
+      },
+      corePlugins: {
+        preflight: true
+      }
+    }
+  </script>
+
+  <!-- AOS Animate On Scroll -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      AOS.init({ once: true, disable: 'phone' });
+    });
+  </script>
+
+  <!-- 自訂樣式 -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .glow-bg {
+      background: radial-gradient(circle at 30% 80%, #c60f1a33 0%, #000 60%);
+    }
+    .slide-in {
+      transform: translateY(-100%);
+      transition: transform 0.3s ease-in-out;
+    }
+    .slide-in.active {
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body class="bg-black text-white font-sans scroll-smooth">
+<a href="#main-content" class="sr-only focus:not-sr-only absolute top-0 left-0 bg-black text-white p-2 z-50">跳到主內容</a>
+  <!-- Navigation -->
+<header id="site-header" class="fixed top-0 w-full z-50 px-6 py-4 flex items-center justify-between transition-colors duration-300 bg-transparent">
+  <a href="#home" class="flex items-center space-x-3 z-50">
+    <img src="images/logo.png" alt="Logo"
+         class="h-10 transition-opacity duration-[1500ms] opacity-100"
+         loading="lazy"
+         data-aos="fade"
+         data-aos-duration="1500">
+    <span class="text-white text-lg md:text-xl font-semibold drop-shadow">立紘數位科技</span>
+  </a>
+
+  <button id="menu-toggle" class="md:hidden text-white focus:outline-none z-50">
+    <svg id="menu-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+         xmlns="http://www.w3.org/2000/svg">
+      <path id="menu-icon-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+    </svg>
+  </button>
+
+  <nav id="main-nav" class="hidden md:flex space-x-8 text-sm font-medium text-gray-300 z-40">
+    <a href="#about" class="hover:text-white">關於立紘</a>
+    <a href="#services" class="hover:text-white">服務項目</a>
+    <a href="#careers" class="hover:text-white">加入立紘</a>
+    <a href="#contact" class="hover:text-white">聯絡我們</a>
+  </nav>
+</header>
+
+  <!-- 字體 -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</header>
+
+
+  <!-- Mobile Menu -->
+<button id="menu-toggle" class="md:hidden text-white focus:outline-none" aria-controls="main-nav" aria-expanded="false" aria-label="開啟主選單">
+  <div id="mobile-menu" class="md:hidden hidden bg-black bg-opacity-60 fixed top-16 left-0 right-0 z-40 text-center py-4 slide-in">
+    <a href="#about" class="block py-2 text-gray-300 hover:text-white smooth-scroll" onclick="closeMenu()">關於立紘</a>
+    <a href="#services" class="block py-2 text-gray-300 hover:text-white smooth-scroll" onclick="closeMenu()">服務項目</a>
+    <a href="#careers" class="block py-2 text-gray-300 hover:text-white smooth-scroll" onclick="closeMenu()">加入立紘</a>
+    <a href="#contact" class="block py-2 text-gray-300 hover:text-white smooth-scroll" onclick="closeMenu()">聯絡我們</a>
+  </div>
+</button>
+
+<main id="main-content">
+<!-- 首頁 Background with Video -->
+<section id="home" class="relative h-screen flex items-center justify-center text-center overflow-hidden">
+  <!-- 背景影片 -->
+  <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+    <source src="videos/home-background.mp4" type="video/mp4">
+    您的瀏覽器不支援影片播放。
+  </video>
+
+  <!-- 僅底部漸層遮罩 -->
+  <div class="absolute inset-0 z-10 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+
+  <!-- 文字內容 -->
+  <div class="z-20 px-4 mt-20 md:mt-10 text-left md:text-left max-w-4xl ml-64 md:ml-80" data-aos="fade-up">
+    <!-- 主標題 -->
+    <h1 class="text-white text-5xl md:text-7xl font-bold leading-tight mb-4 transition-opacity duration-1000 opacity-0"
+        style="font-family: 'Inter', sans-serif; letter-spacing: -1px;"
+        data-aos="zoom-in-right" data-aos-delay="0" data-aos-duration="1800">
+      High Quality
+    </h1>
+
+    <!-- 子標題 -->
+    <h2 class="text-white text-5xl md:text-7xl font-bold leading-tight mb-4 transition-opacity duration-1000 opacity-0"
+        style="font-family: 'Inter', sans-serif; letter-spacing: -1px;"
+        data-aos="zoom-in-left" data-aos-delay="400" data-aos-duration="1800">
+      人文科技，和諧社會
+    </h2>
+
+    <!-- 最下方補充字 -->
+    <p class="text-gray-400 text-base md:text-lg mt-2 tracking-wide transition-opacity duration-1000 opacity-0"
+       style="font-family: 'Inter', sans-serif;"
+       data-aos="zoom-in-up" data-aos-delay="800" data-aos-duration="1800">
+      WebFuture: Government Digital Service Creator.
+    </p>
+  </div>
+</section>
+
+
+
+  <!-- 關於立紘 Section -->
+  <section id="about" class="py-20 px-4 sm:px-6 max-w-6xl mx-auto">
+  <h1 class="text-white text-2xl md:text-5xl font-bold leading-tight mb-8 text-center sm:text-left"
+      style="font-family: 'Inter', sans-serif; letter-spacing: -1px;"
+      data-aos="zoom-in-right" data-aos-delay="0" data-aos-duration="1800">
+    About WebFuture
+  </h1>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center md:items-start">
+    <div class="space-y-5 text-gray-300 leading-relaxed px-4 sm:px-6 md:px-0" data-aos="fade-right" data-aos-duration="1200">
+      <p class="text-lg sm:text-xl font-semibold text-white">人本為基，科技為用。</p>
+      <p class="text-sm sm:text-sm">我們是 2007 年成立的數位科技團隊，擁有超過 18 年以上政府數位服務經驗，以人為本，深耕公共數位轉型。專精於網站系統維運、電子表單、智能應用、創意行銷等服務，堅持以技術實力支持政策落地與使用者體驗。立紘是由「長昇事業夥伴」投資成立的一員，長昇事業創立於 1974 年，源自育達教育事業集團，延續「<strong class='text-white'>以人為本，百年樹人</strong>」的教育精神，轉化為「<strong class='text-white'>人本建築，幸福生活</strong>」的事業實踐。如今，立紘肩負著「<strong class='text-white'>人文科技，和諧社會</strong>」的使命，在長昇「開枝散葉」的企業文化中，持續開拓數位公共服務的可能。</p>
+    </div>
+    <div data-aos="zoom-in" data-aos-duration="1000">
+      <video autoplay loop muted playsinline class="rounded-lg shadow-lg w-full h-[200px] md:h-[200px] object-cover">
+  <source src="videos/github-dark.mp4" type="video/mp4">
+  您的瀏覽器不支援影片標籤。
+</video>
+    </div>
+  </div>
+<div class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center" data-aos="fade-up" data-aos-delay="200">
+  <div class="bg-gray-800 rounded-lg p-6 fade-zoom" id="stat-year">
+    <p id="animated-year" class="text-4xl font-bold text-white">2000</p>
+    <p class="text-sm text-gray-400 mt-2">成立年份</p>
+  </div>
+  <div class="bg-gray-800 rounded-lg p-6 fade-zoom" id="stat-projects">
+    <p id="animated-projects" class="text-4xl font-bold text-white">70+</p>
+    <p class="text-sm text-gray-400 mt-2">政府專案經驗</p>
+  </div>
+  <div class="bg-gray-800 rounded-lg p-6 fade-zoom" id="stat-power">
+    <p id="animated-power" class="text-4xl font-bold text-white">1</p>
+    <p class="text-sm text-gray-400 mt-2">深耕政府數位轉型的執行力</p>
+  </div>
+</div>
+</section>
+
+ <!-- 服務項目 Section -->
+<section id="services" class="w-full bg-black text-white">
+  <div class="relative w-full h-screen flex flex-col justify-center items-center text-center px-4 sm:px-10">
+    <div class="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent z-10"></div>
+    <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover opacity-30 z-0">
+      <source src="videos/government-services.mp4" type="video/mp4">
+    </video>
+    <div class="relative z-10 w-full max-w-6xl px-4 sm:px-10" data-aos="fade-up" data-aos-duration="1000">
+      <h2 class="text-4xl sm:text-5xl font-bold mb-6 tracking-wide">政府數位服務</h2>
+      <p class="text-xl text-gray-300 mb-10 leading-relaxed md:leading-loose">網站維運、應用系統、電子表單、智能客服</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="bg-gray-800/70 p-6 rounded-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="0">
+          網站維運
+          <p class="text-sm text-gray-400 mt-2 leading-snug md:leading-normal">Website Maintenance</p>
+        </div>
+        <div class="bg-gray-800/70 p-6 rounded-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="100">
+          應用系統
+          <p class="text-sm text-gray-400 mt-2">Application Systems</p>
+        </div>
+        <div class="bg-gray-800/70 p-6 rounded-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="200">
+          電子表單
+          <p class="text-sm text-gray-400 mt-2">e-Forms & Online Submission</p>
+        </div>
+        <div class="bg-gray-800/70 p-6 rounded-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="300">
+          智能客服
+          <p class="text-sm text-gray-400 mt-2">Smart Customer Service</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 品牌數位行銷 Section -->
+<section id="marketing" class="w-full bg-black text-white">
+  <div class="relative w-full h-screen flex flex-col justify-center items-center text-center px-4 sm:px-10">
+    <div class="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent z-10"></div>
+    <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover opacity-30 z-0">
+      <source src="videos/marketing.mp4" type="video/mp4">
+    </video>
+    <div class="relative z-10 w-full max-w-6xl px-4 sm:px-10" data-aos="fade-up" data-aos-duration="1000">
+      <h2 class="text-4xl sm:text-5xl font-bold mb-6 tracking-wide">品牌數位行銷</h2>
+      <p class="text-xl text-gray-300 mb-10">社群維運、銷售企劃、影片製作、影音頻道</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="bg-gray-800/70 p-6 rounded-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="0">
+          社群維運
+          <p class="text-sm text-gray-400 mt-2">Social Media Management</p>
+        </div>
+        <div class="bg-gray-800/70 p-6 rounded-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="100">
+          銷售企劃
+          <p class="text-sm text-gray-400 mt-2">Sales Strategy</p>
+        </div>
+        <div class="bg-gray-800/70 p-6 rounded-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="200">
+          影片製作
+          <p class="text-sm text-gray-400 mt-2">Video Production</p>
+        </div>
+        <div class="bg-gray-800/70 p-6 rounded-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="300">
+          影音頻道
+          <p class="text-sm text-gray-400 mt-2">Media Channel</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 加入立紘 Section -->
+<section id="careers" class="w-full bg-black text-white" style="margin-top: 0px;">
+  <div class="absolute inset-0 backdrop-blur-sm bg-gradient-to-b from-white/10 to-transparent z-10"></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent z-10"></div>
+  <div class="relative w-full h-screen flex flex-col justify-center items-center text-center px-4 sm:px-10" style="background-image: url('images/careers-bg.jpg'); background-size: cover; background-position: center;">
+    <div class="absolute inset-0 bg-black bg-opacity-40 z-0"></div>
+    <div class="relative z-10 max-w-4xl" data-aos="fade-up" data-aos-duration="1000">
+      <h2 class="text-4xl sm:text-5xl font-bold mb-4 tracking-wide">Join WebFuture！</h2>
+      <p class="text-lg text-gray-300 mb-10">加入立紘 Be part of the future of digital public services.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+        <div class="bg-gray-800/70 p-6 rounded-lg" data-aos="fade-right" data-aos-delay="100">
+          <h3 class="text-xl font-semibold mb-2">團隊文化</h3>
+          <p class="text-gray-300">我們相信文化是一種氛圍：不拘泥於傳統、也不盲從風潮。在穩健與創新間取得平衡，讓團隊在穩定中前行，在希望中成長。</p>
+        </div>
+        <div class="bg-gray-800/70 p-6 rounded-lg" data-aos="fade-left" data-aos-delay="200">
+          <h3 class="text-xl font-semibold mb-2">開放職缺</h3>
+          <a href="https://www.104.com.tw/company/d5uhjds?jobsource=yahoo" target="_blank" title="Facebook 專頁(另開視窗)" class="text-cyan-400 hover:underline block mb-2">工程師招募專區 →</a>
+          <a href="https://www.facebook.com/webfuture888/" target="_blank" title="Facebook 專頁(另開視窗)" class="text-cyan-400 hover:underline block">立紘小聚 →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 聯絡我們 Section -->
+<section id="contact" class="relative w-full bg-black text-white py-20 px-4 sm:px-6 overflow-hidden" 
+         style="background-image: url('images/contact-bg.png'); background-size: cover; background-position: center;">
+  
+  <!-- 背景遮罩 + 動畫 -->
+  <div class="absolute inset-0 bg-black bg-opacity-50 animate-pulse-slow z-0"></div>
+
+  <!-- 內容區塊 -->
+  <div class="relative z-10 max-w-3xl mx-auto text-center" data-aos="fade-up" data-aos-duration="1000">
+    <h2 class="text-3xl font-bold mb-6" data-aos="fade-down" data-aos-delay="100">聯絡我們</h2>
+    <p class="mb-2" data-aos="fade-up" data-aos-delay="300">地址：台北市中正區重慶南路一段10號8樓 808 室</p>
+    <p class="mb-2" data-aos="fade-up" data-aos-delay="400">電話：(02)2311-2811　　傳真：(02)2311-2880</p>
+
+    <!-- 地圖區塊動畫 -->
+    <div class="mt-6" data-aos="zoom-in" data-aos-delay="500">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.630837590869!2d121.5105727109539!3d25.046599237691517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a90d26cc4217%3A0x938118a096817c!2zMTAw5Y-w5YyX5biC5Lit5q2j5Y2A6YeN5oW25Y2X6Lev5LiA5q61MTDomZ84!5e0!3m2!1szh-TW!2stw!4v1752148387083!5m2!1szh-TW!2stw" 
+              width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+
+<footer class="bg-black text-gray-300 border-t border-gray-700 mt-10">
+  <div class="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
+
+    <!-- 導覽選單 -->
+    <nav aria-label="頁尾導覽選單" class="space-y-2">
+      <h3 class="text-white font-semibold text-base mb-2">快速導覽</h3>
+      <a href="#home" class="block hover:text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 rounded">首頁</a>
+      <a href="#about" class="block hover:text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 rounded">關於立紘</a>
+      <a href="#services" class="block hover:text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 rounded">服務項目</a>
+      <a href="#careers" class="block hover:text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 rounded">加入立紘</a>
+      <a href="#contact" class="block hover:text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 rounded">聯絡我們</a>
+    </nav>
+
+    <!-- 聯絡資訊 -->
+    <div class="space-y-2">
+      <h3 class="text-white font-semibold text-base mb-2">聯絡資訊</h3>
+      <p>立紘數位科技股份有限公司</p>
+      <p>地址：台北市中正區重慶南路一段10號8樓 808 室</p>
+      <p>電話：(02)2311-2811</p>
+      <p>傳真：(02)2311-2880</p>
+    </div>
+
+    <!-- 版權與標誌 -->
+    <div class="flex flex-col items-start md:items-end justify-between">
+      <a href="https://www.facebook.com/webfuture888" target="_blank" title="Facebook 專頁(另開視窗)" class="text-cyan-400 hover:underline focus:outline-none focus:ring-2 focus:ring-cyan-400 rounded">
+        <br> <img src="images/facebook.svg" alt="立紘小聚" class="h-8 mb-4" /> 
+      </a>
+      <p class="text-gray-400 text-xs">&copy; 2025 WebFuture. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+
+
+  <script>
+    AOS.init();
+
+    const toggleBtn = document.getElementById('menu-toggle');
+    const menuIconPath = document.getElementById('menu-icon-path');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    toggleBtn.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.contains('active');
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('active');
+      menuIconPath.setAttribute('d', isOpen ? 'M4 6h16M4 12h16M4 18h16' : 'M6 18L18 6M6 6l12 12');
+    });
+
+    function closeMenu() {
+      mobileMenu.classList.add('hidden');
+      mobileMenu.classList.remove('active');
+      menuIconPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+    }
+
+    window.addEventListener('click', function(e) {
+      const menu = document.getElementById('mobile-menu');
+      if (!menu.contains(e.target) && !toggleBtn.contains(e.target)) {
+        closeMenu();
+      }
+    });
+  </script>
+<script>
+  function startCounters() {
+    // 加入顯示與縮放效果
+    ["stat-year", "stat-projects", "stat-power"].forEach(id => {
+      document.getElementById(id).classList.add("active");
+    });
+
+    // 成立年份動畫
+    const yearEl = document.getElementById('animated-year');
+    const years = ["2025", "2024", "2023", "2022",  "2021", "2020", "2019", "2018","2017", "2013", "2011", "2009", "2008", "2007"];
+    let yIndex = 0;
+    const yearInterval = setInterval(() => {
+      yearEl.innerHTML = `<span class='jump-text'>${years[yIndex]}</span>`;
+      yIndex++;
+      if (yIndex >= years.length) clearInterval(yearInterval);
+    }, 80);
+
+    // 政府專案經驗動畫
+    const projEl = document.getElementById('animated-projects');
+    let projValue = 70;
+    const projInterval = setInterval(() => {
+      projEl.innerHTML = `<span class='jump-text'>${projValue}+</span>`;
+      projValue++;
+      if (projValue > 100) clearInterval(projInterval);
+    }, 30);
+
+    // 執行力動畫
+    const powerEl = document.getElementById('animated-power');
+    const powerSteps = ["100","200","300","400","500","600","700","800","900","!","∞"];
+    let pIndex = 0;
+    const powerInterval = setInterval(() => {
+      powerEl.innerHTML = `<span class='jump-text'>${powerSteps[pIndex]}</span>`;
+      pIndex++;
+      if (pIndex >= powerSteps.length) clearInterval(powerInterval);
+    }, 200);
+  }
+
+  let blockTriggered = false;
+  window.addEventListener('scroll', () => {
+    const aboutBlock = document.getElementById('about');
+    const rect = aboutBlock.getBoundingClientRect();
+    if (!blockTriggered && rect.top <= window.innerHeight && rect.bottom >= 0) {
+      startCounters();
+      blockTriggered = true;
+    }
+  });
+</script>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const header = document.querySelector("header");
+    if (header) {
+      const height = header.offsetHeight;
+      document.documentElement.style.scrollPaddingTop = height + "px";
+    }
+  });
+</script>
+<!-- Dot Navigation -->
+<!-- Dot Navigation 無障礙優化 -->
+<nav class="fixed right-6 top-1/2 transform -translate-y-1/2 z-50 space-y-4" aria-label="頁面快速導覽">
+  <a href="#home" class="block w-4 h-4 rounded-full bg-gray-500 hover:bg-white transition focus:outline-none focus:ring-2 focus:ring-cyan-400" title="首頁" aria-label="前往首頁"></a>
+  <a href="#about" class="block w-4 h-4 rounded-full bg-gray-500 hover:bg-white transition focus:outline-none focus:ring-2 focus:ring-cyan-400" title="關於立紘" aria-label="前往關於立紘"></a>
+  <a href="#services" class="block w-4 h-4 rounded-full bg-gray-500 hover:bg-white transition focus:outline-none focus:ring-2 focus:ring-cyan-400" title="政府數位服務" aria-label="前往政府數位服務"></a>
+  <a href="#marketing" class="block w-4 h-4 rounded-full bg-gray-500 hover:bg-white transition focus:outline-none focus:ring-2 focus:ring-cyan-400" title="品牌數位行銷" aria-label="前往品牌數位行銷"></a>
+  <a href="#careers" class="block w-4 h-4 rounded-full bg-gray-500 hover:bg-white transition focus:outline-none focus:ring-2 focus:ring-cyan-400" title="加入立紘" aria-label="前往加入立紘"></a>
+  <a href="#contact" class="block w-4 h-4 rounded-full bg-gray-500 hover:bg-white transition focus:outline-none focus:ring-2 focus:ring-cyan-400" title="聯絡我們" aria-label="前往聯絡我們"></a>
+</nav>
+
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script>
+  const toggleBtn = document.getElementById('menu-toggle');
+  const menuIconPath = document.getElementById('menu-icon-path');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  toggleBtn.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.contains('active');
+    mobileMenu.classList.toggle('hidden');
+    mobileMenu.classList.toggle('active');
+    menuIconPath.setAttribute('d', isOpen ? 'M4 6h16M4 12h16M4 18h16' : 'M6 18L18 6M6 6l12 12');
+  });
+
+  function closeMenu() {
+    mobileMenu.classList.add('hidden');
+    mobileMenu.classList.remove('active');
+    menuIconPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+  }
+
+  window.addEventListener('click', function (e) {
+    if (!document.getElementById('mobile-menu').contains(e.target) &&
+        !document.getElementById('menu-toggle').contains(e.target)) {
+      closeMenu();
+    }
+  });
+</script>
+<script>
+  window.addEventListener('scroll', function () {
+    const header = document.getElementById('site-header');
+    const homeSection = document.getElementById('home');
+
+    const homeBottom = homeSection.offsetTop + homeSection.offsetHeight;
+    const scrollY = window.scrollY;
+
+    if (scrollY >= homeBottom - 100) {
+      header.classList.remove('bg-transparent');
+      header.classList.add('bg-black', 'bg-opacity-80', 'backdrop-blur-md');
+    } else {
+      header.classList.remove('bg-black', 'bg-opacity-80', 'backdrop-blur-md');
+      header.classList.add('bg-transparent');
+    }
+  });
+</script>
+
+
+</body>
+</html>
